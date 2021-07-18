@@ -8,6 +8,7 @@ namespace TheNumberOfNailsAndBlowsOnThem
         {
             int needNails;
             int needBlowOnTheNeils;
+            int blowsToAllNails = 0;
 
             while (true)
             {
@@ -43,12 +44,13 @@ namespace TheNumberOfNailsAndBlowsOnThem
             for(int hammeredNails = 0; hammeredNails < needNails; hammeredNails++) 
             {
                 for(int blowsDelivered = 0; blowsDelivered < needBlowOnTheNeils; blowsDelivered++) 
-                { 
-
+                {
+                    blowsToAllNails++;
                 }
             }
 
-            Console.WriteLine("Количество гвоздей: {0}, количество ударов: {1}", needNails, needBlowOnTheNeils);
+            Console.WriteLine("Количество гвоздей: {0}, количество ударов по гвоздю: {1}", needNails, needBlowOnTheNeils);
+            Console.WriteLine("Всего ударов по всем гвоздям {0}", blowsToAllNails);
            
         }
     }
